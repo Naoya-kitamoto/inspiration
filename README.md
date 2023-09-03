@@ -54,4 +54,4 @@ has_many :comments
 |user               |references |foreign_key: true null: false |
 |item               |references |foreign_key: true null: false |
 belongs_to :user
-belongs_to :item
+belongs_to :idea
