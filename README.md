@@ -1,28 +1,40 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Name  
+  inspiration
 
-Things you may want to cover:
 
-* Ruby version
+* Explanation
+  自身のアイデアを投稿してそれに対する他者の考えや意見などを持ち寄ることができる
 
-* System dependencies
 
-* Configuration
+* URL  
+  https://inspiration-39678.onrender.com
 
-* Database creation
 
-* Database initialization
+* How to Use  
+  ・ユーザー登録をしてもらう  
+  ・アイデア投稿画面からさまざまな見解が欲しいアイデアを投稿  
+  ・投稿されたアイデアを一覧で閲覧でき、投稿をクリックすると詳細ページにいける  
+  ・詳細ページにはコメントを書き込むことが可能
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+* Back Ground
+  自身のひらめきや一瞬のアイデアは具体化されることが少なく、また実現など難しいものである。  
+  だが、このアプリケーションを通じてアイデアを投稿することで消えてなくなるはずだったアイデアが実現可能なものになるかもしれない。  
+  また他者のアイデアに触発されて全く新しい技術や考えも生み出されるかもしれない。  
+  そのような課題を解決するためにこのアプリケーションを開発しました。
 
-* Deployment instructions
 
-* ...
+* requirement
+  https://docs.google.com/spreadsheets/d/1sznFMGISspUhdtOrk4RabaJdtI9o-9ktI5kuXG_A7gI/edit
 
+
+* Want to Add
+  ・お気に入り機能  
+    今後のコメントが気になるアイデアをマイページに保存するため  
+  ・いいね機能  
+    どのようなコメントに共感が多く集まるのかを見やすくするため
 
 ## usersテーブル
 |Column             |Type       |Options                  |
