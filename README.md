@@ -30,6 +30,7 @@
   https://docs.google.com/spreadsheets/d/1sznFMGISspUhdtOrk4RabaJdtI9o-9ktI5kuXG_A7gI/edit
 
 
+
 * Want to Add  
   ・お気に入り機能  
     今後のコメントが気になるアイデアをマイページに保存するため  
