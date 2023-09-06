@@ -6,8 +6,8 @@
 
 .login-red-btn {
   width: 100%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
+  background: rgba(23, 130, 238, 0.897);
+  border: 1px solid greenyellow;
   color: #fff;
   line-height: 48px;
   font-size: 14px;
