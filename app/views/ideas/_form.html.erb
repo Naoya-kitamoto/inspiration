@@ -1,21 +1,24 @@
 <%= form_with model: @idea, local: true do |f|%>
   <div class="field">
-    <%= f.label :hoge, "タイトル" %><br />
-    <%= f.text_field :hoge, id:"prototype_title" %>
+    <%= f.label :title, "タイトル" %><br />
+    <%= f.text_field :title, id:"idea_title" %>
   </div>
 
   <div class="field">
-    <%= f.label :hoge, "カテゴリー" %><br />
-    <%= f.text_area :hoge, class: :form__text, id:"prototype_catch_copy" %>
+    <%= f.label :category_id, "カテゴリー" %><br />
+    <%=  f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select-box", id:"idea-category"})  %>
   </div>
 
   <div class="field">
-    <%= f.label :hoge, "アイデアの詳細" %><br />
-    <%= f.text_area :hoge, class: :form__text, id:"prototype_concept" %>
-    <label class="form-image">
-      <span class="image-file">画像</span>
-      <%= f.file_field :image, class: 'hidden' %>
-    </label>
+    <div class="textarea-with-image-button">
+        <%= f.label :subject, "アイデアの詳細" %><br />
+      <%= f.text_area :subject, class: :form__text, id: "idea_subject" %>
+      <label for="idea_image" class="form-image">
+        <span class="image-file">画像</span>
+      </label>
+    </div>
+
+    <%= f.file_field :image, class: 'hidden', id: 'idea_image' %>
   </div>
 
   <div class="actions">
