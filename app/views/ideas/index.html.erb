@@ -22,11 +22,9 @@
       </div>
     </header>
   <div class="inner">
-    <% if user_signed_in?%>
       <div class="greeting">
         <%= "投稿されたアイデア"%>
       </div>
-    <% end %>
     <div class="card__wrapper">
       <%= render partial: 'idea', collection: @idea %>
   </div>
