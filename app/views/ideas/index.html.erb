@@ -26,6 +26,10 @@
         <%= "投稿されたアイデア"%>
       </div>
     <div class="card__wrapper">
-      <%= render partial: 'idea', collection: @idea %>
-  </div>
-</main>
+      <% @ideas.each do |idea|%>
+        <% if !current_user || current_user.id != idea.user_id %>
+          <%= render partial: 'idea', locals: { idea: idea } %>
+        <% end %>
+      <% end %>
+    </div>
+  </main>
