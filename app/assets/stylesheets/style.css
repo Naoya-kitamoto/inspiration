@@ -192,7 +192,7 @@ a {
 }
 .prototype__user{
   display: block;
-  font-size: 16px;
+  font-size: 24px;
   color: #999;
   text-align: center;
   text-decoration: underline;
@@ -209,8 +209,11 @@ a {
   margin-bottom: 8px;
 }
 .detail__title{
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
+}
+.detail__message{
+  font-size: 20px;
 }
 .prototype__manage{
   display: flex;
