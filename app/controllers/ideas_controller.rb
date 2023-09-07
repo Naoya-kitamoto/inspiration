@@ -19,6 +19,6 @@ class IdeasController < ApplicationController
     private
 
     def idea_params
-      params.require(:idea).permit(:title, :subject,:category_id).merge(user_id: current_user.id)
+      params.require(:idea).permit(:title, :category_id, :subject, :image).merge(user_id: current_user.id)
     end
 end
