@@ -22,12 +22,14 @@
       </div>
     </header>
   <div class="inner">
-    <% if user_signed_in?%>
       <div class="greeting">
         <%= "投稿されたアイデア"%>
       </div>
-    <% end %>
     <div class="card__wrapper">
-      <%= render partial: 'idea', collection: @idea %>
-  </div>
-</main>
+      <% @ideas.each do |idea|%>
+        <% if !current_user || current_user.id != idea.user_id %>
+          <%= render partial: 'idea', locals: { idea: idea } %>
+        <% end %>
+      <% end %>
+    </div>
+  </main>

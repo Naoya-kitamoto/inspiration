@@ -1,6 +1,7 @@
 class IdeasController < ApplicationController
   def index
-    @ideas = Idea.all
+    @ideas = Idea.includes(:user).all
+    @idea = Idea.new
   end
 
   def new
