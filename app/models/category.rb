@@ -9,6 +9,7 @@ class Category < ActiveHash::Base
     { id: 7, name: '企画' },
     { id: 8, name: '開発' },
     { id: 9, name: '料理' },
+    { id: 10, name: 'ファッション' },
   ]
   include ActiveHash::Associations
   has_many :ideas

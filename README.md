@@ -4,7 +4,7 @@
   inspiration
 
 
-* Explanation
+* Explanation  
   自身のアイデアを投稿してそれに対する他者の考えや意見などを持ち寄ることができる
 
 

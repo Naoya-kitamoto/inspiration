@@ -17,7 +17,11 @@ class IdeasController < ApplicationController
         render :new, status: :unprocessable_entity
       end
     end
-  
+
+    def show
+      @idea = Idea.find(params[:id])
+    end
+
     private
 
     def idea_params
@@ -29,5 +33,5 @@ class IdeasController < ApplicationController
   
       redirect_to new_user_session_path
     end
-    
+
 end
