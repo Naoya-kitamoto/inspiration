@@ -1,3 +1,10 @@
+<main class="main">
+    <header class="header">
+      <div class="inner">
+        <div class="nav">
+          <div class="nav__left">
+            <%= link_to image_tag("logo2.png", class: :logo), root_path %>
+          </div>
 <div class="main">
   <div class="inner">
     <div class="user__wrapper">
@@ -27,8 +34,15 @@
       <h2 class="page-heading">
         <%= "ユーザー名さんのプロトタイプ"%>
       </h2>
-      <div class="user__card">
-        <%# 部分テンプレートでそのユーザーが投稿したプロトタイプ投稿一覧を表示する %>
+    <div class="user__card">
+      <% @ideas.each do |idea|%>
+      <div class="card">
+        <%= link_to Category.find(idea.category_id).name, root_path, class: :card__img %>
+          <div class="card__body">
+            <%= link_to idea.title, idea_path(idea), class: :card__title%>
+          </div>
+          </div>
+      <% end %>
       </div>
     </div>
   </div>

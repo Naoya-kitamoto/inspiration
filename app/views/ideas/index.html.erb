@@ -9,7 +9,7 @@
           <% if user_signed_in? %>
              <div class="nav__right">
                <%= link_to "New idea", new_idea_path, class: :nav__btn %>
-               <%= link_to "#{current_user.nickname}", "/", class: :nav__btn %>
+               <%= link_to "#{current_user.nickname}", user_path(current_user), class: :nav__btn %>
                <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }, class: :nav__logout %>
              </div>
           <% else %>
