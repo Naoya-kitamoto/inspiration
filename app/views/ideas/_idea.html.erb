@@ -2,6 +2,6 @@
   <%= link_to Category.find(idea.category_id).name, root_path, class: :card__img %>
   <div class="card__body">
     <%= link_to idea.title, idea_path(idea), class: :card__title%>
-    <%= link_to "#{idea.user.nickname}", idea_path(idea.user), class: :card__user %>
+    <%= link_to "#{idea.user.nickname}", user_path(idea.user.id), class: :card__user %>
   </div>
 </div>
