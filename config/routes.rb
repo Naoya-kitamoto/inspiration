@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   # root "articles#index"
   root to: "ideas#index"
   resources :ideas, only: [:index, :new, :create, :show]
+  resources :users, only: :show
 end
