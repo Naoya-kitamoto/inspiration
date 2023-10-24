@@ -5,18 +5,18 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
          
          validates :nickname,         presence: true
-         with_options presence: true, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: 'cannot use half width character' } do
+         with_options presence: true, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/} do
            validates :last_name,        presence: true,
-                                        format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: 'cannot use half width character' }
+                                        format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/}
            validates :first_name,       presence: true,
-                                        format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: 'cannot use half width character' }
+                                        format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/}
          end
          validates :last_name_kana, presence: true,
                                     format: { with: /\A[\p{katakana}ー－]+\z/ }
          validates :first_name_kana, presence: true,
                                      format: { with: /\A[\p{katakana}ー－]+\z/ }
          PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i
-         validates_format_of :password, with: PASSWORD_REGEX, message: 'must include at least one letter and one number'
+         validates_format_of :password, with: PASSWORD_REGEX, message: 'には数字とアルファベットを1文字以上入れなくてはいけません'
          has_many :comments
          has_many :ideas
         end
